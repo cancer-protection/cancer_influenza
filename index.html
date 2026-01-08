@@ -76,6 +76,14 @@
             color: var(--primary-blue);
         }
 
+        #lang-switch {
+            padding: 0.5rem;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            background: white;
+            color: var(--text-dark);
+        }
+
         /* HERO BANNER */
         .hero-banner {
             background: rgba(255, 255, 255, 0.9);
@@ -252,6 +260,11 @@
             box-shadow: var(--shadow-soft);
         }
 
+        /* LANGUAGE CONTENT */
+        .content-en {
+            display: none;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero-banner h1 {
@@ -267,15 +280,27 @@
 
 <header>
     <nav>
-        <div class="logo">Υγεία & Πρόληψη</div>
-        <ul>
+        <div class="logo">Health & Prevention</div>
+        <ul class="nav-links-el">
             <li><a href="#risks">Κίνδυνοι</a></li>
             <li><a href="#guidelines">Οδηγίες</a></li>
             <li><a href="#situation">Συγκεκριμένη Κατάσταση</a></li>
             <li><a href="#sources">Πηγές</a></li>
         </ul>
+        <ul class="nav-links-en" style="display: none;">
+            <li><a href="#risks">Risks</a></li>
+            <li><a href="#guidelines">Guidelines</a></li>
+            <li><a href="#situation">Specific Situation</a></li>
+            <li><a href="#sources">Sources</a></li>
+        </ul>
+        <select id="lang-switch">
+            <option value="el">Ελληνικά</option>
+            <option value="en">English</option>
+        </select>
     </nav>
 </header>
+
+<div class="content-el">
 
 <div class="hero-banner">
     <img src="https://media.istockphoto.com/id/1473559425/photo/female-medical-practitioner-reassuring-a-patient.jpg?s=612x612&w=0&k=20&c=kGbm-TE5qdppyyiteyip7_CzKLktyPrRuWD4Zz2EcqE=" alt="Γιατρός συμβουλεύει ασθενή" class="hero-image">
@@ -349,7 +374,7 @@
     </section>
 
     <section id="situation">
-        <h2> Συγκατοίκηση με Ασθενή με Γρίπη - Η γυναίκα μου είναι θετική στη γρίπη! </h2>
+        <h2>Συγκατοίκηση με Ασθενή με Γρίπη - Η γυναίκα μου είναι θετική στη γρίπη!</h2>
         
         <div class="danger-highlight">
             <h3>🏠 ΑΜΕΣΗ ΑΝΑΓΚΗ ΑΠΟΜΟΝΩΣΗΣ</h3>
@@ -417,10 +442,172 @@
 
 </div>
 
-<footer>
+<footer class="footer-el">
     <p>Τελευταία ενημέρωση: Ιανουάριος 2026 | Πληροφορίες για ενημερωτικούς σκοπούς - Συμβουλευτείτε πάντα τον γιατρό σας</p>
 </footer>
 
+</div>
+
+<div class="content-en" style="display: none;">
+
+<div class="hero-banner">
+    <img src="https://media.istockphoto.com/id/1473559425/photo/female-medical-practitioner-reassuring-a-patient.jpg?s=612x612&w=0&k=20&c=kGbm-TE5qdppyyiteyip7_CzKLktyPrRuWD4Zz2EcqE=" alt="Doctor advising patient" class="hero-image">
+    <h1>⚠️ CRITICAL WARNING FOR PATIENTS UNDER CHEMOTHERAPY</h1>
+    <p>Contact with a person who has the flu can be <strong>life-threatening</strong></p>
+</div>
+
+<div class="container">
+
+    <!-- CRITICAL STATISTICS -->
+    <section id="stats" class="critical-stats">
+        <h2>📊 What the Scientific Data Says</h2>
+        <div class="stat-grid">
+            <div class="stat-item">
+                <div class="stat-number">10x</div>
+                <div class="stat-label">Higher mortality<br>from flu in cancer patients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5-10x</div>
+                <div class="stat-label">Higher risk<br>of hospitalization</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">9%</div>
+                <div class="stat-label">Mortality of patients<br>with cancer and flu</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section id="risks">
+        <h2>Why is the Flu So Dangerous for Immunosuppressed Patients?</h2>
+        
+        <p>Chemotherapy seriously affects the immune system, dramatically reducing white blood cells (neutropenia). This means the body <strong>cannot effectively fight</strong> the flu virus.</p>
+
+        <div class="danger-highlight">
+            <h3>🚨 IMMEDIATE DANGER</h3>
+            <p>According to the CDC (Centers for Disease Control and Prevention): Patients receiving chemotherapy or radiation in the last month are at <strong>increased risk of severe complications</strong> from the flu that can lead to death.</p>
+        </div>
+
+        <h3>Possible Complications for Immunosuppressed Patients</h3>
+        <p>Unlike the healthy population, where flu is usually self-limiting, in immunosuppressed patients it can cause:</p>
+        <ul>
+            <li><strong>Pneumonia</strong> - the main cause of mortality</li>
+            <li><strong>Secondary bacterial infections</strong></li>
+            <li><strong>Sepsis</strong></li>
+            <li><strong>Acute kidney failure</strong></li>
+            <li><strong>Delay or cancellation of chemotherapy</strong>, with consequences for the disease progression</li>
+        </ul>
+    </section>
+
+    <section id="guidelines">
+        <h2>What Official Health Organizations Say</h2>
+        
+        <h3>🇬🇷 EODY (National Public Health Organization)</h3>
+        <p>EODY classifies patients with <strong>"Immunosuppression (hereditary or acquired due to disease or treatment)"</strong> in high-risk groups for severe complications from the flu.</p>
+
+        <div class="warning-box">
+            <p>⚠️ Also, according to EODY: <strong>"Flu can cause severe illness and complications that can sometimes be fatal for some individuals"</strong></p>
+        </div>
+
+        <h3>🇺🇸 CDC (Centers for Disease Control and Prevention)</h3>
+        <p>The CDC explicitly states that:</p>
+        <ul>
+            <li>Patients with cancer are at <strong>increased risk of severe complications</strong></li>
+            <li>Flu in these patients can be <strong>severe and sometimes life-threatening</strong></li>
+            <li>Fever in a patient under chemotherapy is a <strong>medical emergency</strong></li>
+        </ul>
+
+        <h3>🏥 American Cancer Society</h3>
+        <p>It emphasizes that <strong>"it is important to avoid the flu because it can be severe and sometimes life-threatening"</strong> in patients with cancer and weakened immune systems.</p>
+    </section>
+
+    <section id="situation">
+        <h2>Help! My wife has tested positive for flu, what can we do?</h2>
+        
+        <div class="danger-highlight">
+            <h3>🏠 IMMEDIATE NEED FOR ISOLATION</h3>
+            <p>Cohabitation with a person diagnosed with flu and high fever is <strong>extremely dangerous</strong> for a patient under chemotherapy. Virus transmission occurs very easily within the same house.</p>
+        </div>
+
+        <h3>How Does the Flu Spread?</h3>
+        <ul>
+            <li><strong>Droplets in the air</strong> - from coughing, sneezing, even talking</li>
+            <li><strong>Contact with contaminated surfaces</strong> - doorknobs, switches, remotes</li>
+            <li><strong>Direct contact</strong> - shared utensils, towels</li>
+        </ul>
+
+        <div class="warning-box">
+            <p>⚠️ <strong>IMPORTANT:</strong> According to EODY, patients with severe immunosuppression may shed the virus for <strong>more than a week</strong>, much longer than healthy adults.</p>
+        </div>
+
+        <div class="action-box">
+            <h4>✅ WHAT TO DO IMMEDIATELY:</h4>
+            <ul>
+                <li><strong>Physical separation</strong> - The flu patient should stay in a separate room or house</li>
+                <li><strong>Contact oncologist</strong> - Inform about possible exposure and instructions for prophylactic antiviral therapy</li>
+                <li><strong>Monitor for fever</strong> - If fever appears, it is a MEDICAL EMERGENCY</li>
+                <li><strong>Strict hygiene measures</strong> if separation is not possible</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+        <p>The flu is not "just a cold". For a patient under chemotherapy, <strong>exposure to the flu virus can have catastrophic consequences</strong>.</p>
+        
+        <p>The scientific data is clear:</p>
+        <ul>
+            <li>Hospitalization is <strong>5-10 times more likely</strong></li>
+            <li>Mortality is <strong>10 times higher</strong></li>
+            <li>Complications can be <strong>irreversible</strong></li>
+        </ul>
+
+        <p style="margin-top: 1rem;"><strong>Protecting the immunosuppressed patient must be a priority.</strong></p>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <div class="cta-section">
+        <h2>📞 Don't Wait - Contact a Doctor</h2>
+        <p>If the patient under chemotherapy has come into contact with a person with flu, contact the oncologist IMMEDIATELY for prophylactic treatment instructions.</p>
+        <div class="emergency-number">
+            In case of fever: Call 999!
+        </div>
+    </div>
+
+    <!-- SOURCES -->
+    <section class="sources" id="sources">
+        <h3>📚 Sources & Bibliography</h3>
+        <ul>
+            <li><strong>CDC (Centers for Disease Control and Prevention)</strong> - "Flu and Cancer" - <a href="https://www.cdc.gov/flu/highrisk/flu-cancer.html" target="_blank">cdc.gov/flu/highrisk/flu-cancer</a></li>
+            <li><strong>EODY (National Public Health Organization)</strong> - "Flu and Seasonal Flu" - <a href="https://eody.gov.gr/disease/gripi-kai-epochiki-gripi/" target="_blank">eody.gov.gr</a></li>
+            <li><strong>Cooksley CD et al.</strong> - "Influenza vaccination coverage in cancer patients" - Scientific study showing 4x higher hospitalization and 10x higher mortality</li>
+            <li><strong>PMC/NIH</strong> - "Influenza in Immunosuppressed Populations: A Review" - <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2775097/" target="_blank">ncbi.nlm.nih.gov</a></li>
+            <li><strong>Scientific Reports (Nature)</strong> - "Hospitalization for influenza was 5-10 times higher in cancer patients, with mortality rate of 9%"</li>
+            <li><strong>American Cancer Society</strong> - "Vaccinations During Cancer Treatment" - <a href="https://www.cancer.org/cancer/managing-cancer/side-effects/infections/vaccination-during-cancer-treatment.html" target="_blank">cancer.org</a></li>
+            <li><strong>Euroclinic Athens</strong> - "Flu: Useful Questions and Answers" - <a href="https://www.euroclinic.gr/article/gripi-q-amp-a-gia-na-matheis-o-ti-chreiazetai/" target="_blank">euroclinic.gr</a></li>
+        </ul>
+    </section>
+
+</div>
+
+<footer class="footer-en" style="display: none;">
+    <p>Last update: January 2026 | Information for informational purposes - Always consult your doctor</p>
+</footer>
+
+</div>
+
+<script>
+    document.getElementById('lang-switch').addEventListener('change', function() {
+        var lang = this.value;
+        document.querySelector('.content-el').style.display = lang === 'el' ? 'block' : 'none';
+        document.querySelector('.content-en').style.display = lang === 'en' ? 'block' : 'none';
+        document.querySelector('.nav-links-el').style.display = lang === 'el' ? 'flex' : 'none';
+        document.querySelector('.nav-links-en').style.display = lang === 'en' ? 'flex' : 'none';
+        document.querySelector('.footer-el').style.display = lang === 'el' ? 'block' : 'none';
+        document.querySelector('.footer-en').style.display = lang === 'en' ? 'block' : 'none';
+        document.documentElement.lang = lang;
+    });
+</script>
+
 </body>
 </html>
-
