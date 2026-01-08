@@ -7,20 +7,17 @@
     <meta name="keywords" content="γρίπη, ανοσοκαταστολή, χημειοθεραπεία, καρκίνος, ΕΟΔΥ, CDC">
     <meta name="author" content="Ενημερωτική Σελίδα Υγείας">
     <title>⚠️ ΕΠΕΙΓΟΝ: Γρίπη και Ανοσοκαταστολή - Κρίσιμες Πληροφορίες</title>
-    <link rel="icon" href="https://via.placeholder.com/32?text=!" type="image/x-icon"> <!-- Add a real favicon here -->
-    <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://via.placeholder.com/32?text=!" type="image/x-icon"> <!-- Replace with real favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --danger-red: #c41e3a;
-            --danger-dark: #8b0000;
-            --warning-orange: #e65100;
-            --alert-yellow: #f9a825;
-            --bg-cream: #fdf8f3;
-            --text-dark: #1a1a1a;
-            --text-muted: #4a4a4a;
-            --accent-teal: #00695c;
-            --shadow-soft: 0 4px 20px rgba(0,0,0,0.08);
-            --shadow-strong: 0 8px 40px rgba(196,30,58,0.15);
+            --primary-blue: #007bff;
+            --accent-red: #dc3545;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --shadow-soft: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
             --transition: all 0.3s ease;
         }
 
@@ -31,15 +28,16 @@
         }
 
         body {
-            font-family: 'Noto Sans', sans-serif;
-            background: var(--bg-cream);
+            font-family: 'Roboto', sans-serif;
+            background: url('https://thumbs.dreamstime.com/b/subtle-blue-medical-background-ideal-health-reports-blogs-informational-graphics-sophisticated-low-light-calming-349281786.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: var(--text-dark);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         /* HEADER & NAV */
         header {
-            background: white;
+            background: var(--bg-white);
             box-shadow: var(--shadow-soft);
             position: sticky;
             top: 0;
@@ -47,25 +45,24 @@
         }
 
         nav {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 16px 24px;
+            padding: 1rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         nav .logo {
-            font-family: 'Literata', serif;
-            font-size: 1.4rem;
-            color: var(--danger-red);
+            font-size: 1.5rem;
             font-weight: 700;
+            color: var(--primary-blue);
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 24px;
+            gap: 1.5rem;
         }
 
         nav a {
@@ -76,317 +73,192 @@
         }
 
         nav a:hover {
-            color: var(--accent-teal);
+            color: var(--primary-blue);
         }
 
-        /* CRITICAL BANNER */
-        .emergency-banner {
-            background: linear-gradient(135deg, var(--danger-red) 0%, var(--danger-dark) 100%);
-            color: white;
-            padding: 20px;
+        /* HERO BANNER */
+        .hero-banner {
+            background: rgba(255, 255, 255, 0.9);
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 3rem 2rem;
             text-align: center;
-            animation: pulse-bg 2s infinite;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-soft);
         }
 
-        @keyframes pulse-bg {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.92; }
-        }
-
-        .emergency-banner h1 {
-            font-family: 'Literata', serif;
-            font-size: 1.8rem;
+        .hero-banner h1 {
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--accent-red);
+            margin-bottom: 1rem;
         }
 
-        .emergency-banner p {
-            font-size: 1.1rem;
-            opacity: 0.95;
+        .hero-banner p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
         }
 
         /* MAIN CONTAINER */
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 24px;
+            padding: 1rem 1.5rem;
         }
 
-        /* CRITICAL STAT BOX */
-        .critical-stats {
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            box-shadow: var(--shadow-strong);
-            border-left: 6px solid var(--danger-red);
-            margin-bottom: 40px;
-            transition: var(--transition);
-        }
-
-        .critical-stats:hover {
-            box-shadow: var(--shadow-strong);
-        }
-
-        .critical-stats h2 {
-            font-family: 'Literata', serif;
-            color: var(--danger-red);
-            font-size: 1.6rem;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .stat-item {
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
-            border-radius: 12px;
-            padding: 24px;
-            text-align: center;
-            border: 1px solid rgba(196,30,58,0.15);
-            transition: var(--transition);
-        }
-
-        .stat-item:hover {
-            transform: translateY(-4px);
-        }
-
-        .stat-number {
-            font-family: 'Literata', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--danger-red);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-top: 8px;
-        }
-
-        /* SECTION STYLING */
+        /* SECTIONS */
         section {
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 28px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
             box-shadow: var(--shadow-soft);
             transition: var(--transition);
         }
 
         section:hover {
-            box-shadow: var(--shadow-strong);
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
         }
 
         section h2 {
-            font-family: 'Literata', serif;
             font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #eee;
+            font-weight: 500;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
         }
 
         section h3 {
-            font-size: 1.15rem;
-            color: var(--accent-teal);
-            margin: 24px 0 12px 0;
-            font-weight: 600;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin: 1.5rem 0 0.75rem;
         }
 
         section p {
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
             color: var(--text-muted);
         }
 
-        /* WARNING BOX */
+        /* STAT GRID */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-item {
+            background: #ffffff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-0.25rem);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-red);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* WARNING & ACTION BOXES */
+        .warning-box, .action-box, .danger-highlight {
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+
         .warning-box {
-            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-            border-left: 5px solid var(--warning-orange);
-            border-radius: 8px;
-            padding: 20px 24px;
-            margin: 20px 0;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
         }
 
-        .warning-box p {
-            color: var(--warning-orange);
-            font-weight: 500;
-            margin: 0;
-        }
-
-        /* ACTION BOX */
         .action-box {
-            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-            border-left: 5px solid var(--accent-teal);
-            border-radius: 8px;
-            padding: 20px 24px;
-            margin: 20px 0;
+            background: #d4edda;
+            border-left: 4px solid #28a745;
         }
 
-        .action-box h4 {
-            color: var(--accent-teal);
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-        }
-
-        .action-box ul {
-            margin: 0;
-            padding-left: 20px;
-            color: #1b5e20;
-        }
-
-        .action-box li {
-            margin-bottom: 8px;
-        }
-
-        /* DANGER HIGHLIGHT */
         .danger-highlight {
-            background: var(--danger-red);
-            color: white;
-            padding: 24px;
-            border-radius: 12px;
-            margin: 24px 0;
-        }
-
-        .danger-highlight h3 {
-            color: white;
-            margin-top: 0;
-            font-size: 1.2rem;
-        }
-
-        .danger-highlight p {
-            color: rgba(255,255,255,0.95);
-            margin: 0;
+            background: #f8d7da;
+            border-left: 4px solid var(--accent-red);
         }
 
         /* SOURCES */
-        .sources {
-            background: #f5f5f5;
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 40px;
-        }
-
-        .sources h3 {
-            font-family: 'Literata', serif;
-            font-size: 1.2rem;
-            color: var(--text-dark);
-            margin-bottom: 16px;
-        }
-
         .sources ul {
             list-style: none;
             padding: 0;
         }
 
         .sources li {
-            margin-bottom: 12px;
-            padding-left: 20px;
-            position: relative;
+            margin-bottom: 0.75rem;
             color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .sources li::before {
-            content: "📄";
-            position: absolute;
-            left: 0;
         }
 
         .sources a {
-            color: var(--accent-teal);
+            color: var(--primary-blue);
             text-decoration: none;
-            transition: var(--transition);
         }
 
         .sources a:hover {
             text-decoration: underline;
-            color: var(--danger-red);
         }
 
-        /* CALL TO ACTION */
+        /* CTA */
         .cta-section {
-            background: linear-gradient(135deg, var(--danger-red) 0%, var(--danger-dark) 100%);
+            background: var(--primary-blue);
             color: white;
-            border-radius: 16px;
-            padding: 40px;
+            border-radius: 0.5rem;
+            padding: 2rem;
             text-align: center;
-            margin-top: 40px;
-        }
-
-        .cta-section h2 {
-            font-family: 'Literata', serif;
-            color: white;
-            border-bottom: none;
-            font-size: 1.8rem;
-            margin-bottom: 16px;
-        }
-
-        .cta-section p {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 24px;
+            margin-top: 2rem;
         }
 
         .emergency-number {
-            display: inline-block;
             background: white;
-            color: var(--danger-red);
-            font-family: 'Literata', serif;
-            font-size: 1.5rem;
+            color: var(--accent-red);
             font-weight: 700;
-            padding: 16px 32px;
-            border-radius: 8px;
-            margin-top: 16px;
-            transition: var(--transition);
-        }
-
-        .emergency-number:hover {
-            background: #f8f8f8;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            display: inline-block;
         }
 
         /* FOOTER */
         footer {
-            background: white;
-            padding: 24px;
+            background: var(--bg-white);
+            padding: 1.5rem;
             text-align: center;
-            color: #888;
+            color: var(--text-muted);
             font-size: 0.85rem;
-            margin-top: 40px;
+            margin-top: 2rem;
             box-shadow: var(--shadow-soft);
         }
 
-        footer a {
-            color: var(--accent-teal);
-            text-decoration: none;
-        }
-
         /* RESPONSIVE */
-        @media (max-width: 600px) {
-            .emergency-banner h1 {
-                font-size: 1.4rem;
-            }
-            .stat-number {
-                font-size: 2.2rem;
+        @media (max-width: 768px) {
+            .hero-banner h1 {
+                font-size: 1.5rem;
             }
             .container {
-                padding: 24px 16px;
-            }
-            section {
-                padding: 24px 20px;
-            }
-            nav ul {
-                flex-direction: column;
-                gap: 12px;
+                padding: 1rem;
             }
         }
     </style>
@@ -405,7 +277,8 @@
     </nav>
 </header>
 
-<div class="emergency-banner">
+<div class="hero-banner">
+    <img src="https://media.istockphoto.com/id/1473559425/photo/female-medical-practitioner-reassuring-a-patient.jpg?s=612x612&w=0&k=20&c=kGbm-TE5qdppyyiteyip7_CzKLktyPrRuWD4Zz2EcqE=" alt="Γιατρός συμβουλεύει ασθενή" class="hero-image">
     <h1>⚠️ ΚΡΙΣΙΜΗ ΠΡΟΕΙΔΟΠΟΙΗΣΗ ΓΙΑ ΑΣΘΕΝΕΙΣ ΥΠΟ ΧΗΜΕΙΟΘΕΡΑΠΕΙΑ</h1>
     <p>Η επαφή με άτομο που έχει γρίπη μπορεί να είναι <strong>απειλητική για τη ζωή</strong></p>
 </div>
@@ -413,12 +286,12 @@
 <div class="container">
 
     <!-- CRITICAL STATISTICS -->
-    <div class="critical-stats" id="stats">
+    <section id="stats" class="critical-stats">
         <h2>📊 Τι Λένε τα Επιστημονικά Δεδομένα</h2>
         <div class="stat-grid">
             <div class="stat-item">
                 <div class="stat-number">10x</div>
-                <div class="stat-label">Υψηλότερη θνησιμότητα<br>από γρίπη σε καρκινοπαθείς<grok-card data-id="be8496" data-type="citation_card" ></grok-card></div>
+                <div class="stat-label">Υψηλότερη θνησιμότητα<br>από γρίπη σε καρκινοπαθείς</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">5-10x</div>
@@ -426,10 +299,10 @@
             </div>
             <div class="stat-item">
                 <div class="stat-number">9%</div>
-                <div class="stat-label">Θνησιμότητα ασθενών<br>με καρκίνο και γρίπη<grok-card data-id="bcbc68" data-type="citation_card" ></grok-card></div>
+                <div class="stat-label">Θνησιμότητα ασθενών<br>με καρκίνο και γρίπη</div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- MAIN CONTENT -->
     <section id="risks">
@@ -439,13 +312,13 @@
 
         <div class="danger-highlight">
             <h3>🚨 ΑΜΕΣΟΣ ΚΙΝΔΥΝΟΣ</h3>
-            <p>Σύμφωνα με το CDC: Οι ασθενείς που λαμβάνουν χημειοθεραπεία ή ακτινοθεραπεία τον τελευταίο μήνα διατρέχουν <strong>αυξημένο κίνδυνο σοβαρών επιπλοκών</strong> από τη γρίπη που μπορεί να οδηγήσουν σε θάνατο.<grok-card data-id="8aab25" data-type="citation_card" ></grok-card></p>
+            <p>Σύμφωνα με το CDC (Αμερικανικό Κέντρο Ελέγχου Νοσημάτων): Οι ασθενείς που λαμβάνουν χημειοθεραπεία ή ακτινοθεραπεία τον τελευταίο μήνα διατρέχουν <strong>αυξημένο κίνδυνο σοβαρών επιπλοκών</strong> από τη γρίπη που μπορεί να οδηγήσουν σε θάνατο.</p>
         </div>
 
         <h3>Πιθανές Επιπλοκές για Ανοσοκατεσταλμένους</h3>
         <p>Σε αντίθεση με τον υγιή πληθυσμό, όπου η γρίπη συνήθως είναι αυτοπεριοριζόμενη, στους ανοσοκατεσταλμένους ασθενείς μπορεί να προκαλέσει:</p>
-        <ul style="margin-left: 20px; color: var(--text-muted);">
-            <li><strong>Πνευμονία</strong> - η κύρια αιτία θνησιμότητας<grok-card data-id="7d69b9" data-type="citation_card" ></grok-card></li>
+        <ul>
+            <li><strong>Πνευμονία</strong> - η κύρια αιτία θνησιμότητας</li>
             <li><strong>Δευτερογενείς βακτηριακές λοιμώξεις</strong></li>
             <li><strong>Σηψαιμία</strong></li>
             <li><strong>Οξεία νεφρική ανεπάρκεια</strong></li>
@@ -456,99 +329,97 @@
     <section id="guidelines">
         <h2>Τι Λένε οι Επίσημοι Οργανισμοί Υγείας</h2>
         
-        <h3>🇬🇷 ΕΟΔΥ (Εθνικός Οργανισμός Δημόσιας Υγείας) - Συστάσεις 2025-2026</h3>
-        <p>Ο ΕΟΔΥ κατατάσσει τους ασθενείς με <strong>«Ανοσοκαταστολή (κληρονομική ή επίκτητη εξαιτίας νοσήματος ή θεραπείας)»</strong> στις ομάδες υψηλού κινδύνου για σοβαρές επιπλοκές από τη γρίπη.<grok-card data-id="317445" data-type="citation_card" ></grok-card></p>
+        <h3>🇬🇷 ΕΟΔΥ (Εθνικός Οργανισμός Δημόσιας Υγείας)</h3>
+        <p>Ο ΕΟΔΥ κατατάσσει τους ασθενείς με <strong>«Ανοσοκαταστολή (κληρονομική ή επίκτητη εξαιτίας νοσήματος ή θεραπείας)»</strong> στις ομάδες υψηλού κινδύνου για σοβαρές επιπλοκές από τη γρίπη.</p>
 
         <div class="warning-box">
-            <p>⚠️ Επίσης, σύμφωνα με τον ΕΟΔΥ: <strong>«Η γρίπη μπορεί να προκαλέσει σοβαρή νόσηση και επιπλοκές που καμιά φορά μπορεί να είναι θανατηφόρες για κάποια άτομα»</strong><grok-card data-id="24fd13" data-type="citation_card" ></grok-card></p>
+            <p>⚠️ Επίσης, σύμφωνα με τον ΕΟΔΥ: <strong>«Η γρίπη μπορεί να προκαλέσει σοβαρή νόσηση και επιπλοκές που καμιά φορά μπορεί να είναι θανατηφόρες για κάποια άτομα»</strong></p>
         </div>
 
         <h3>🇺🇸 CDC (Κέντρο Ελέγχου Νοσημάτων ΗΠΑ)</h3>
         <p>Το CDC αναφέρει ρητά ότι:</p>
-        <ul style="margin-left: 20px; color: var(--text-muted);">
-            <li>Οι ασθενείς με καρκίνο διατρέχουν <strong>αυξημένο κίνδυνο σοβαρών επιπλοκών</strong><grok-card data-id="7f038e" data-type="citation_card" ></grok-card></li>
-            <li>Η γρίπη σε αυτούς τους ασθενείς μπορεί να είναι <strong>σοβαρή και ενίοτε απειλητική για τη ζωή</strong><grok-card data-id="e36ebe" data-type="citation_card" ></grok-card></li>
+        <ul>
+            <li>Οι ασθενείς με καρκίνο διατρέχουν <strong>αυξημένο κίνδυνο σοβαρών επιπλοκών</strong></li>
+            <li>Η γρίπη σε αυτούς τους ασθενείς μπορεί να είναι <strong>σοβαρή και ενίοτε απειλητική για τη ζωή</strong></li>
             <li>Ο πυρετός σε ασθενή υπό χημειοθεραπεία αποτελεί <strong>ιατρικό επείγον</strong></li>
         </ul>
 
         <h3>🏥 Αμερικανική Αντικαρκινική Εταιρεία</h3>
-        <p>Τονίζει ότι <strong>«είναι σημαντικό να αποφεύγεται η γρίπη γιατί μπορεί να είναι σοβαρή και μερικές φορές απειλητική για τη ζωή»</strong> σε ασθενείς με καρκίνο και εξασθενημένο ανοσοποιητικό.<grok-card data-id="3cf655" data-type="citation_card" ></grok-card></p>
+        <p>Τονίζει ότι <strong>«είναι σημαντικό να αποφεύγεται η γρίπη γιατί μπορεί να είναι σοβαρή και μερικές φορές απειλητική για τη ζωή»</strong> σε ασθενείς με καρκίνο και εξασθενημένο ανοσοποιητικό.</p>
     </section>
 
     <section id="situation">
-        <h2> Συμβίωση Ανοσοκατεσταλμένου με Ασθενή με Γρίπη</h2>
+        <h2>Η Συγκεκριμένη Κατάσταση: Συγκατοίκηση με Ασθενή με Γρίπη</h2>
         
         <div class="danger-highlight">
             <h3>🏠 ΑΜΕΣΗ ΑΝΑΓΚΗ ΑΠΟΜΟΝΩΣΗΣ</h3>
-            <p>Η συγκατοίκηση με άτομο που έχει διαγνωστεί με γρίπη και έχει υψηλό πυρετό είναι <strong>εξαιρετικά επικίνδυνη</strong> για ασθενή υπό χημειοθεραπεία. Η μετάδοση του ιού γίνεται πολύ εύκολα μέσα στο ίδιο σπίτι.<grok-card data-id="94c40b" data-type="citation_card" ></grok-card><grok-card data-id="100cbf" data-type="citation_card" ></grok-card></p>
+            <p>Η συγκατοίκηση με άτομο που έχει διαγνωστεί με γρίπη και έχει υψηλό πυρετό είναι <strong>εξαιρετικά επικίνδυνη</strong> για ασθενή υπό χημειοθεραπεία. Η μετάδοση του ιού γίνεται πολύ εύκολα μέσα στο ίδιο σπίτι.</p>
         </div>
 
         <h3>Πώς Μεταδίδεται η Γρίπη;</h3>
-        <ul style="margin-left: 20px; color: var(--text-muted);">
+        <ul>
             <li><strong>Σταγονίδια στον αέρα</strong> - από βήχα, φτάρνισμα, ακόμη και ομιλία</li>
             <li><strong>Επαφή με μολυσμένες επιφάνειες</strong> - πόμολα, διακόπτες, τηλεκοντρόλ</li>
             <li><strong>Άμεση επαφή</strong> - κοινά σκεύη, πετσέτες</li>
         </ul>
 
         <div class="warning-box">
-            <p>⚠️ <strong>ΣΗΜΑΝΤΙΚΟ:</strong> Σύμφωνα με τον ΕΟΔΥ, οι ασθενείς με σοβαρή ανοσοκαταστολή μπορεί να μεταδίδουν τον ιό για <strong>περισσότερο από μία εβδομάδα</strong>, πολύ περισσότερο από τους υγιείς ενήλικες.<grok-card data-id="405025" data-type="citation_card" ></grok-card></p>
+            <p>⚠️ <strong>ΣΗΜΑΝΤΙΚΟ:</strong> Σύμφωνα με τον ΕΟΔΥ, οι ασθενείς με σοβαρή ανοσοκαταστολή μπορεί να μεταδίδουν τον ιό για <strong>περισσότερο από μία εβδομάδα</strong>, πολύ περισσότερο από τους υγιείς ενήλικες.</p>
         </div>
 
         <div class="action-box">
             <h4>✅ ΤΙ ΠΡΕΠΕΙ ΝΑ ΓΙΝΕΙ ΑΜΕΣΑ:</h4>
             <ul>
-                <li><strong>Φυσική απομάκρυνση</strong> - Ο ασθενής με γρίπη πρέπει να μείνει σε ξεχωριστό χώρο ή σπίτι<grok-card data-id="5f1052" data-type="citation_card" ></grok-card></li>
-                <li><strong>Επικοινωνία με ογκολόγο</strong> - Ενημέρωση για πιθανή έκθεση και οδηγίες για προληπτική αντιϊική θεραπεία<grok-card data-id="2d8d4e" data-type="citation_card" ></grok-card></li>
+                <li><strong>Φυσική απομάκρυνση</strong> - Ο ασθενής με γρίπη πρέπει να μείνει σε ξεχωριστό χώρο ή σπίτι</li>
+                <li><strong>Επικοινωνία με ογκολόγο</strong> - Ενημέρωση για πιθανή έκθεση και οδηγίες για προληπτική αντιϊική θεραπεία</li>
                 <li><strong>Παρακολούθηση για πυρετό</strong> - Αν εμφανιστεί πυρετός, είναι ΙΑΤΡΙΚΟ ΕΠΕΙΓΟΝ</li>
-                <li><strong>Αυστηρά μέτρα υγιεινής</strong> αν η απομάκρυνση δεν είναι δυνατή: Μάσκες, απολύμανση, αερισμός<grok-card data-id="30a79c" data-type="citation_card" ></grok-card></li>
+                <li><strong>Αυστηρά μέτρα υγιεινής</strong> αν η απομάκρυνση δεν είναι δυνατή</li>
             </ul>
         </div>
     </section>
 
     <section>
         <h2>Συμπέρασμα</h2>
-        <p>Η γρίπη δεν είναι «απλό κρυολόγημα». Για έναν ασθενή υπό χημειοθεραπεία, <strong>η έκθεση στον ιό της γρίπης μπορεί να έχει καταστροφικές συνέπειες</strong>.<grok-card data-id="f67ed6" data-type="citation_card" ></grok-card></p>
+        <p>Η γρίπη δεν είναι «απλό κρυολόγημα». Για έναν ασθενή υπό χημειοθεραπεία, <strong>η έκθεση στον ιό της γρίπης μπορεί να έχει καταστροφικές συνέπειες</strong>.</p>
         
         <p>Τα επιστημονικά δεδομένα είναι ξεκάθαρα:</p>
-        <ul style="margin-left: 20px; color: var(--text-muted);">
+        <ul>
             <li>Η νοσηλεία είναι <strong>5-10 φορές πιθανότερη</strong></li>
-            <li>Η θνησιμότητα είναι <strong>10 φορές υψηλότερη</strong><grok-card data-id="958b3f" data-type="citation_card" ></grok-card></li>
+            <li>Η θνησιμότητα είναι <strong>10 φορές υψηλότερη</strong></li>
             <li>Οι επιπλοκές μπορεί να είναι <strong>μη αναστρέψιμες</strong></li>
         </ul>
 
-        <p style="margin-top: 20px;"><strong>Η προστασία του ανοσοκατεσταλμένου ασθενούς πρέπει να είναι προτεραιότητα.</strong></p>
+        <p style="margin-top: 1rem;"><strong>Η προστασία του ανοσοκατεσταλμένου ασθενούς πρέπει να είναι προτεραιότητα.</strong></p>
     </section>
 
     <!-- CALL TO ACTION -->
     <div class="cta-section">
         <h2>📞 Μην Περιμένετε - Επικοινωνήστε με Γιατρό</h2>
-        <p>Αν ο ασθενής υπό χημειοθεραπεία έχει έρθει σε επαφή με άτομο με γρίπη, επικοινωνήστε ΑΜΕΣΑ με τον ογκολόγο για οδηγίες προληπτικής θεραπείας.<grok-card data-id="174fc6" data-type="citation_card" ></grok-card></p>
+        <p>Αν ο ασθενής υπό χημειοθεραπεία έχει έρθει σε επαφή με άτομο με γρίπη, επικοινωνήστε ΑΜΕΣΑ με τον ογκολόγο για οδηγίες προληπτικής θεραπείας.</p>
         <div class="emergency-number">
             Σε περίπτωση πυρετού: ΕΚΑΒ 166
         </div>
     </div>
 
     <!-- SOURCES -->
-    <div class="sources" id="sources">
+    <section class="sources" id="sources">
         <h3>📚 Πηγές & Βιβλιογραφία</h3>
         <ul>
-            <li><strong>CDC (Centers for Disease Control and Prevention)</strong> - "Flu and Cancer" - <a href="https://www.cdc.gov/flu/highrisk/flu-cancer.html" target="_blank">cdc.gov/flu/highrisk/flu-cancer</a><grok-card data-id="f69141" data-type="citation_card" ></grok-card></li>
-            <li><strong>ΕΟΔΥ (Εθνικός Οργανισμός Δημόσιας Υγείας)</strong> - "Γρίπη και Εποχική Γρίπη" - <a href="https://eody.gov.gr/el/nosimata/metadotika/nosimata-kai-themata-ygeias/gripi-kai-epoxiki-gripi.html" target="_blank">eody.gov.gr</a><grok-card data-id="efa661" data-type="citation_card" ></grok-card></li>
-            <li><strong>PharmaManage</strong> - "Εποχική Γρίπη 2025-2026: Οι συστάσεις του ΕΟΔΥ" - <a href="https://www.pharmamanage.gr/epoxiki-gripi-2025-2026-oi-sustaseis-tou-eody/" target="_blank">pharmamanage.gr</a><grok-card data-id="456fb8" data-type="citation_card" ></grok-card></li>
+            <li><strong>CDC (Centers for Disease Control and Prevention)</strong> - "Flu and Cancer" - <a href="https://www.cdc.gov/flu/highrisk/flu-cancer.html" target="_blank">cdc.gov/flu/highrisk/flu-cancer</a></li>
+            <li><strong>ΕΟΔΥ (Εθνικός Οργανισμός Δημόσιας Υγείας)</strong> - "Γρίπη και Εποχική Γρίπη" - <a href="https://eody.gov.gr/disease/gripi-kai-epochiki-gripi/" target="_blank">eody.gov.gr</a></li>
             <li><strong>Cooksley CD et al.</strong> - "Influenza vaccination coverage in cancer patients" - Επιστημονική μελέτη που δείχνει 4x υψηλότερη νοσηλεία και 10x υψηλότερη θνησιμότητα</li>
             <li><strong>PMC/NIH</strong> - "Influenza in Immunosuppressed Populations: A Review" - <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2775097/" target="_blank">ncbi.nlm.nih.gov</a></li>
-            <li><strong>Scientific Reports (Nature)</strong> - "Hospitalization for influenza was 5-10 times higher in cancer patients, with mortality rate of 9%"<grok-card data-id="5c6269" data-type="citation_card" ></grok-card></li>
-            <li><strong>American Cancer Society</strong> - "Vaccinations During Cancer Treatment" - <a href="https://www.cancer.org/cancer/managing-cancer/side-effects/infections/vaccination-during-cancer-treatment.html" target="_blank">cancer.org</a><grok-card data-id="e49305" data-type="citation_card" ></grok-card></li>
+            <li><strong>Scientific Reports (Nature)</strong> - "Hospitalization for influenza was 5-10 times higher in cancer patients, with mortality rate of 9%"</li>
+            <li><strong>American Cancer Society</strong> - "Vaccinations During Cancer Treatment" - <a href="https://www.cancer.org/cancer/managing-cancer/side-effects/infections/vaccination-during-cancer-treatment.html" target="_blank">cancer.org</a></li>
             <li><strong>Ευρωκλινική Αθηνών</strong> - "Γρίπη: Χρήσιμες ερωτήσεις και απαντήσεις" - <a href="https://www.euroclinic.gr/article/gripi-q-amp-a-gia-na-matheis-o-ti-chreiazetai/" target="_blank">euroclinic.gr</a></li>
         </ul>
-    </div>
+    </section>
 
 </div>
 
 <footer>
-    <p>Τελευταία ενημέρωση: Ιανουάριος 2026 | Πληροφορίες για ενημερωτικούς σκοπούς - Συμβουλευτείτε πάντα τον γιατρό σας | <a href="mailto:info@healthinfo.gr">Επικοινωνία</a></p>
+    <p>Τελευταία ενημέρωση: Ιανουάριος 2026 | Πληροφορίες για ενημερωτικούς σκοπούς - Συμβουλευτείτε πάντα τον γιατρό σας</p>
 </footer>
 
 </body>
-
 </html>
